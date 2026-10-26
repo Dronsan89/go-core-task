@@ -34,6 +34,10 @@ func addElements(numbers []int, value int) []int {
 
 // copySlice возвращает копию слайса, не разделяющую память с оригиналом.
 func copySlice(numbers []int) []int {
+	if numbers == nil {
+		return nil
+	}
+
 	result := make([]int, len(numbers))
 	copy(result, numbers)
 	return result
